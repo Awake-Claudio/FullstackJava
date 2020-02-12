@@ -1,0 +1,223 @@
+Subproceso secuencia()
+	
+	Definir n1 como entero;
+	Definir n2 como entero;
+	Definir n3 como Entero;
+	Definir promedio como real;
+	
+	
+	Escribir "Digite el primer número";
+	leer n1;
+	Escribir "Digite el segundo número";
+	leer n2;
+	Escribir "Digite el tercer número";
+	leer n3;
+	
+	Promedio= (n1+n2+n3)/3
+	
+	Escribir "El promedio es ",  promedio;
+Obs. Awaker=> No hay estructura de repetición y/o desicion. Solución cumple lo pedido.
+
+	
+FinSubProceso
+
+Subproceso Condicionalci
+	
+	Definir nom como cadena;
+	Definir gen como cadena;
+	
+	Escribir "Escriba su nombre";
+	leer nom;
+	Escribir "Escriba su género";
+	leer gen;
+	
+	Si gen= "masculino" entonces
+		
+		
+		Escribir "",nom," debe ir a baño de hombres";
+	FinSi
+	Si gen= "femenino" entonces
+		
+		Escribir "",nom," debe ir a baño de mujeres";
+	FinSi
+	
+FinSubProceso
+
+Obs. Awaker=> Estructura ok.
+
+Subproceso Condicionalci2
+	
+	Condicionalci
+	Definir op como cadena
+	
+	Escribir "Elegir actividad: baño o ducha"
+	Leer op;
+	
+	si op= "baño" entonces
+		
+		Escribir "Debe pagar $250"
+	FinSi
+	
+	Si op="ducha" entonces 
+		
+		Escribir "Debe pagar $2500"
+	FinSi
+FinSubProceso
+
+Obs. Awaker=> llamado funcion ok, estructura ok, solucion cumple
+
+subproceso condicionalci3
+	
+	Definir n como entero
+	
+	Escribir "Digite número del 1 al 10";
+	leer n;
+	
+	Si n<1 o n>10 entonces
+		escribir "Error de Ingreso"
+	FinSi
+	Si n=1 entonces
+		escribir "uno"
+	FinSi
+	Si n=2 Entonces
+		escribir "dos"
+	FinSi
+	Si n=3 Entonces
+		escribir "tres"
+	FinSi
+	Si n=4 entonces
+		escribir "cuatro"
+	FinSi
+	Si n=5 Entonces
+		escribir "cinco"
+	FinSi
+	Si n=6 Entonces
+		escribir "seis"
+	FinSi
+	Si n=7 entonces
+		escribir "siete"
+	FinSi
+	Si n=8 Entonces
+		escribir "ocho"
+	FinSi
+	Si n=9 Entonces
+		escribir "nueve"
+	FinSi
+	si n=10 Entonces
+		escribir "diez"
+	FinSi
+FinSubProceso
+
+Obs. Awaker=> Estructura cumple (mejorable), desicion validacion cumple (mejorable), solución Cumple 
+
+subproceso repetitivam
+	Definir n,c como entero
+	definir p como real
+	
+	c=0;
+	
+	
+	
+	Repetir
+		
+		Escribir "Ingresar numero"
+	    leer n
+		
+		c=c+1;
+		s=s+n;
+		
+	Hasta Que n=0
+	
+	p=s/c;
+	
+	Escribir "la suma de numeros es: ",c
+	Escribir "El promedio es: ",p
+	
+	
+	
+	
+FinSubProceso
+
+subproceso repetitivar
+	
+	
+	definir n como cadena
+	definir c Como Entero
+	
+	c=0
+	
+	
+	Repetir
+		Escribir "ingresar nombres que empiecen con J";
+		leer n;
+		c=c+1;
+		
+		
+	Hasta Que n= "Juan";
+	
+	si n= "Juan" entonces
+		escribir "Ganaste"
+		escribir "intentos: ", c
+	FinSi
+FinSubProceso
+
+
+Subproceso repetitivap
+	
+	Limpiar Pantalla
+	
+	Definir nombre como cadena
+	Definir i como entero
+	Dimension nombre[10]
+	
+	Escribir "Ingrese diez nombres"
+	
+	
+	
+	
+	
+	
+	
+FinSubProceso
+
+
+ 
+
+proceso Prueba
+	
+	Definir 
+	
+	
+	Escribir "MENU:" 
+	Escribir "Opciones"
+	Escribir "1.Secuencia"
+	Escribir "2.Condicionalci"
+	Escribir "3.Condicionalci2" 
+	Escribir "4.Condicionalci3"
+Escribir "5.Repetitivam"
+Escribir "6.Repetitivar"
+Escribir "7.repetitivap"
+Escribir "8.ArregloS"
+Escribir "9.ArregloB"
+Escribir "10.Salir"
+
+
+Escribir "ingrese una opcion a elegir"
+leer op
+
+Segun op hacer
+		1:
+		secuencia
+	2:
+		Condicionalci
+		
+	3:
+		Condicionalci2
+		
+		4: Condi
+FinSegun
+	
+	
+FinProceso
+	
+

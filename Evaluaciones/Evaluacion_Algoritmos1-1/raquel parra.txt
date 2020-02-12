@@ -1,0 +1,76 @@
+Algoritmo EVALUACION_N1_ABP_MRPR
+	Definir Num Como Entero
+	Escribir 'Hola! a continuacion se presenta el menu del algoritmo'
+	Escribir 'Escriba un numero del 1 al 7 para iniciar su seleccion'
+	Leer Num
+	Si Num=1 Entonces
+		Definir suma Como Real
+		Definir number Como Entero
+		Escribir 'Su seleccion fue 1, opcion SECUENCIAL'
+		suma <- 0
+		Para number<-(00) Hasta 3 Hacer
+			Escribir 'Ingrese Números a sumar'
+			Leer number
+			suma <- suma+number
+		FinPara
+		Escribir (suma)
+		Escribir (suma/3)
+	FinSi
+	Si Num=2 Entonces
+		Escribir 'Su seleccion fue 2, opcion CONDICIONAL SI ENTONCES'
+		Definir Nombre Como Caracter
+		Definir x Como Caracter
+		Escribir 'Ingrese su nombre'
+		Leer Nombre
+		Escribir 'Usted es Hombre o Mujer?'
+		Leer x
+		Definir J Como Caracter
+		Escribir 'Usted quiere usar el sanitario o la ducha?'
+		Leer J
+		Escribir valor,DE,ingreso
+		Escribir xducha=ducha
+		xsanitario <- sanitario
+		Leer x
+		Si xducha Entonces
+			Leer x
+			Escribir 'el valor a cancelar para utilizar la ducha es de $2.500'
+		FinSi
+		Si xsanitario Entonces
+			Leer x
+			Escribir 'el valor a cancelar para utilizar el sanitario es de $250'
+		FinSi
+	FinSi
+	Si Num=4 Entonces
+		Escribir 'Su seleccion fue 4, opcion Condicional según:'
+		Definir s Como Entero
+		Escribir 'ingrese un numero de 1 a 10'
+		Leer s
+		Segun s  Hacer
+			1:
+				Escribir 'El numero que ingreso fue UNO'
+			2:
+				Escribir 'el numeor que ingreso fue DOS'
+			3:
+				Escribir 'El numero que ingreso fue TRES'
+			4:
+				Escribir 'El numero que ingreso fue CUATRO'
+			5:
+				Escribir 'El numero que ingreso fue CINCO'
+			6:
+				Escribir 'El numero que ingreso fue SEIS'
+			7:
+				Escribir 'El numero que ingreso fue SIETE'
+			8:
+				Escribir 'El numero que ingreso fue OCHO'
+			9:
+				Escribir 'El numero que ingreso fue NUEVE'
+			10:
+				Escribir 'El numero que ingreso fue DIEZ'
+			De Otro Modo:
+				Escribir 'EL NUMERO INGRESADO NO ESTA EN EL INVENTARIO'
+		FinSegun
+	FinSi
+	Si Num=5 Entonces
+	
+	FinSi
+FinAlgoritmo

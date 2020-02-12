@@ -1,0 +1,454 @@
+Subproceso Secuencial
+	
+	Limpiar Pantalla
+	definir n como entero
+	definir s como entero
+	definir p como real
+	
+	
+	Para i<-1 Hasta 3 Con Paso 1 Hacer
+		
+		Escribir "Ingrese un Numero "
+		Leer n;
+		
+		s=s+n;
+		
+	Fin Para
+	
+	p=s/3;
+	
+	Escribir "El Promedio de los numeros es: ",p;
+	
+	
+FinSubProceso
+//----------------------------------------------------------------------------
+SubProceso CondicionalSiEntonces
+	
+	Limpiar Pantalla
+	
+	definir nom,gen como cadena
+	
+	Escribir "Ingrese Su nombre"
+	Leer nom;
+	Escribir "Ingrese Genero";
+	Leer gen;
+	
+	si gen="masculino" Entonces
+		Escribir "",nom," Ingrese al baño de Hombres"
+	SiNo
+		Escribir "",nom," Ingrese al baño de Mujeres"
+	FinSi
+FinSubProceso
+//----------------------------------------------------------------------------
+SubProceso CobroExtra
+	
+	Limpiar Pantalla
+	definir p como entero
+	CondicionalSiEntonces
+	
+	
+	
+		Escribir "Desea ingresar al baño o a la ducha"
+	    Escribir "Ingrese 1-Baño  ($250)";
+	    Escribir "Ingrese 2-Ducha ($2500)";
+	    Escribir "Ingrese 3-Salir";
+	    Leer p;
+	 
+	 
+	    si p=1 Entonces
+			
+			Escribir "Serian $250 pesos por ocupar el baño";
+			
+		SiNo
+			
+			
+		  si p=2 Entonces
+			  
+			Escribir "Serina $2500 pesos por ocupar la ducha" 
+			
+		SiNo
+			Escribir "Muchas gracias por su Atencion Vuelva pronto";
+			
+		FinSi
+		
+		
+		
+	  FinSi
+
+	
+	
+	
+	
+	
+FinSubProceso
+//----------------------------------------------------------------------------
+SubProceso CondicionalSegun
+	
+	Limpiar Pantalla
+	
+	definir n,x como entero
+	
+	Repetir
+		
+		Escribir "Ingrese un numero del 1 hasta el 10";
+	    Leer n;
+		
+		
+	Hasta Que n>=1 y n<=10
+	
+	
+	Segun n Hacer
+			1:
+				Escribir "***UNO***";
+			2:
+				Escribir "***DOS***";
+			3:
+				Escribir "***TRES***";
+				
+			4:
+				Escribir "***CUATRO***";
+			5:
+				Escribir "***CINCO***";
+			6:
+				Escribir "***SEIS***";
+				
+			7:
+				Escribir "***SIETE***";
+			8:
+				Escribir "***OCHO***";
+			9:
+				Escribir "***NUEVE***";
+				
+			10:
+				Escribir "***DIEZ***";
+		Fin Segun
+	
+FinSubProceso
+//----------------------------------------------------------------------------
+SubProceso RepetitivaMientras
+	
+	Limpiar Pantalla
+	
+	
+	definir n como entero
+	definir s como entero
+	definir c como entero
+	definir p como real
+	definir x como entero
+	
+	c=0;
+	
+	x=0;
+	
+	
+	Mientras x = 0 hacer
+		
+		Escribir "Ingrese numero"
+		leer n;
+		
+		si n=0 entonces 
+			x=x+1;
+		SiNo
+			
+	    c=c+1;
+		s=s+n;
+		
+		FinSi
+		
+	
+	FinMientras
+	
+	si c=0 Entonces
+		Escribir "No hay nada para mostrar";
+	SiNo
+		
+		p=s/c;
+		Escribir "Se ingresaron ",c," numeros";
+		Escribir "El promedio de numeros es ",p;
+	FinSi
+	
+	
+	
+FinSubProceso
+//----------------------------------------------------------------------------
+SubProceso Repetir1
+	Limpiar Pantalla
+	
+	
+	
+	Definir nom como cadena;
+	definir x como entero
+	definir c Como Entero
+	x=0;
+	
+	Repetir
+		Escribir "Ingrese nombres con J";
+		Leer nom;
+		
+		
+		
+		si nom = "juan" Entonces
+			x=1;
+			
+			
+		FinSi
+		
+		c=c+1;
+	Hasta Que x=1	
+	
+	
+	Escribir "Felicidades Ganaste!!!!"
+	Escribir "Tuviste ",c," Intentos";
+	
+FinSubProceso
+
+//----------------------------------------------------------------------------
+SubProceso RepetitivaPara
+	Limpiar Pantalla
+	
+	Definir nom como cadena
+	Dimension nombres[10]
+	definir c1,c2,c3,c4,c5,c6,c7,c8,c9,c10 como entero
+
+	
+
+	
+	
+	Escribir "***INGRESE 10 NOMBRES***";
+	
+	Para i<-1 Hasta 10 Con Paso 1 Hacer
+		
+		Escribir "Ingrese El Nombre Nro ",i;
+		leer nom;
+		
+		nombres[i]<-nom;
+		
+	Fin Para
+	
+	Para j<-1 Hasta 10 Con Paso 1 Hacer
+		
+		si nombres[1]=nombres[j]
+			c1=c1+1;
+		FinSi
+		
+	Fin Para
+	Para w<-1 Hasta 10 Con Paso 1 Hacer
+		
+		si nombres[2]=nombres[w]
+			c2=c2+1;
+		FinSi
+		
+	Fin Para
+	Para r<-1 Hasta 10 Con Paso 1 Hacer
+		
+		si nombres[3]=nombres[r]
+			c3=c3+1;
+		FinSi
+		
+	Fin Para
+	Para g<-1 Hasta 10 Con Paso 1 Hacer
+		
+		si nombres[4]=nombres[g]
+			c4=c4+1;
+		FinSi
+		
+	Fin Para
+	Para p<-1 Hasta 10 Con Paso 1 Hacer
+		
+		si nombres[5]=nombres[p]
+			c5=c5+1;
+		FinSi
+		
+	Fin Para
+	Para z<-1 Hasta 10 Con Paso 1 Hacer
+		
+		si nombres[6]=nombres[z]
+			c6 = c6+1;
+		FinSi
+		
+	Fin Para
+	Para l<-1 Hasta 10 Con Paso 1 Hacer
+		
+		si nombres[7]=nombres[l]
+			c7 = c7+1;
+		FinSi
+		
+	Fin Para
+	Para k<-1 Hasta 10 Con Paso 1 Hacer
+		
+		si nombres[8]=nombres[k]
+			c8 =c8+1;
+		FinSi
+		
+	Fin Para
+	Para s<-1 Hasta 10 Con Paso 1 Hacer
+		
+		si nombres[9]=nombres[s]
+			c9 = c9+1;
+		FinSi
+		
+	Fin Para
+	Para a<-1 Hasta 10 Con Paso 1 Hacer
+		
+		si nombres[10]=nombres[a]
+			c10 = c10+1
+		FinSi
+		
+	Fin Para
+	
+	
+	si c1>1
+		
+		Escribir nombres[1];
+		
+	FinSi
+	si c2>1
+		
+		Escribir nombres[2];
+		
+	FinSi
+	si c3>1
+		
+		Escribir nombres[3];
+		
+	FinSi
+	si c4>1
+		
+		Escribir nombres[4];
+		
+	FinSi
+	si c5>1
+		
+		Escribir nombres[5];
+		
+	FinSi
+	si c6>1
+		
+		Escribir nombres[6];
+		
+	FinSi
+	si c7>1
+		
+		Escribir nombres[7];
+		
+	FinSi
+	si c8>1
+		
+		Escribir nombres[8];
+		
+	FinSi
+	si c9>1
+		
+		Escribir nombres[9];
+		
+	FinSi
+	si c10>1
+		
+		Escribir nombres[10];
+		
+	FinSi
+	
+	si c1=1 y c2=1 y c3=1 y c4=1 y c5=1 y c6=1 y c7=1 y c8=1 y c9=1 y c10=1
+		
+		Escribir "*****NINGUN NOMBRE SE REPITE******";
+		
+	FinSi
+	
+	
+FinSubProceso
+
+SubProceso unidimensional
+	
+	
+	definir n como entero
+	definir d como cadena
+	
+	n=0;
+	Escribir "ingrese la cantidad de datos a ingresar";
+	leer n;
+	
+	
+	Dimension  datos[n]
+	
+	Para i<-1 Hasta n Con Paso 1 Hacer
+		
+		Escribir "Ingrese el nombre nro",i;
+		leer d;
+		
+		datos[i]<-d;
+		
+	Fin Para
+	
+	Para j<-1 Hasta n Con Paso 1 Hacer
+		Escribir datos[j] 
+		
+	Fin Para
+	
+	
+FinSubProceso
+
+
+
+
+
+Algoritmo Prueba
+	
+	definir op como entero;
+	op=0;
+	
+	Repetir
+		
+		Escribir "----------------------------"
+		Escribir "------------MENÚ------------";
+		Escribir "----------------------------"
+		
+		Escribir "1-Secuencial";
+		Escribir "2-Condicional Si Entonces";
+		Escribir "3-Condicionla Si Entonces Anidado";
+		Escribir "4-Condicional Segun";
+		Escribir "5-Repetitiva Mientras";
+		Escribir "6-Repetitiva Repetir";
+		Escribir "7-Repetitiva Para";
+		Escribir "8-Arreglo Simple";
+		Escribir "9-Arreglo Bidimensional";
+		Escribir "10-Salir";
+		
+		Escribir "Ingrese una opcion a eleccion";
+		Leer op;
+
+		
+		Segun op Hacer
+			1:
+				Secuencial
+			2:
+				CondicionalSiEntonces
+			3:
+				CobroExtra
+			4:	
+				CondicionalSegun
+			5:
+			    RepetitivaMientras
+				
+			6:
+				Repetir1
+				
+			7:
+				RepetitivaPara
+				
+			8:	
+				unidimensional
+			10: 
+				 escribir "GRACIAS POR OCUPAR LA HERRAMIENTA";
+				
+		Fin Segun
+		
+		
+		
+	Hasta Que op=10
+	
+	
+	
+	
+	
+	
+FinAlgoritmo
