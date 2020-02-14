@@ -1,0 +1,50 @@
+﻿Algoritmo EVALUACION_N1_ABP_MRPR (Maria Raquel Parra Roldán)
+
+En primera instancia se define los datos que se deben guardar
+NUM como entero
+ para posteriormente solicitar los datos a las personas que veran el menu
+el cual les da la opcion de 1 a 7 derivandolos a sus respectivos sub_menu
+
+1.Secuencial:
+2.Condicional Si entonces:
+3.Condicional Si entonces anidado:
+4.Condicional según:
+5.Repetitiva Mientras
+6.Repetitiva Repetir
+7.repetitiva Para
+8.Arreglo Simple
+9.Arreglo Bidimensional
+10.Salir
+
+_________________________
+al ingresar se les saluda cordialmente para que despues ingrese un valor
+si la persona ingresa 1:
+ se define a NUM como entero para que ingrese las cantidades de 3 unidades de suma
+se define la suma como real y number como entero
+
+le muestra la seleccion como opcion secuencial
+se inicia la suma de los numeros
+fin de suma y muestra suma con promedio
+
+___________________________
+si la persona ingresa n2 y n3
+se le solicita el nombre y se guarda el dato
+se le consulta si es hombre o mujer para despues dirijirlo a la derecha si es mujer y si es hombre a la izquierda
+
+posterior a eso se consulta si desea usar el sanitario o ducha 
+dependiendo de su respuesta se consulta si es verdadero si la persona dice si se envia el mensaje de cobro por servicio
+
+si la persona dice que no se le envia un mensaje de falso
+_________________________________________________________
+
+si la persona ingresa N4
+se utilizo la condicionalidad de SEGUN
+para mostrar el numero ingresado como texto
+
+si el numero no esta dentro del rango se finaliza el proceso
+
+_____________________________________________________
+Si la persona ingresa N5
+
+
+

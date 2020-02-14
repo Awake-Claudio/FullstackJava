@@ -1,0 +1,43 @@
+Proyecto Menú
+Katherine Ramos Larenas
+
+
+Subproceso funcion1
+
+	-Se ingresan uno a uno los 3 datos por teclado
+	-se utiliza la funcion suma y luego se didive por el total de elementos para obtener el promedio
+	-se muestra el promedio en pantalla
+
+Subproceso funcion2
+
+	-Se definen los arreglos Nombres y Genero, cada uno con una dimension de [5]
+	-Se define indice "i" para arreglo Genero e indice "j" para arreglo Nombres
+	-Ambos indices se incrementan antes de cerrar el ciclo repetir para llenar los arreglos
+	-Se añaden contadores "c1" y "c2" para mostrar cantidad según genero al final del subproceso
+
+Subproceso funcion3
+	*no comprendí el ejercicio
+
+Subproceso funcion4
+	-Se ingresa número entre 1 y 10 por teclado
+	-Se determina con un case cómo se escribe dicho numero
+	-Se muestra por pantalla el número escrito en palabras
+
+Subproceso funcion5
+	-Se repite el ingreso de datos al arreglo hasta que el dato sea 0
+	*no pude incluir la suma dentro del ciclo repetir
+
+Subproceso funcion6
+	-se define un contador iniciado en 0
+	-Se utiliza bucle repetir para pedir que se ingresen nombres con j por teclado, hasta que el nombre sea igual a "juan"
+	-se muestra por pantalla un mensaje de "ganaste" + el numero de intentos
+
+Subproceso funcion7
+	-se ingresan datos de personas hasta llegar a 10 integrantes
+	*no supe redactar condición para que los nombres se repitieran
+	 
+subproceso funcion8
+	*la idea era hacer un arreglo bidimensional
+
+Subproceso funcion9
+	*la idea era crear un arreglo multidimensional

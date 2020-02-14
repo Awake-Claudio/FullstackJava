@@ -1,0 +1,91 @@
+package miercoles;
+import java.util.Scanner;
+public class notas {
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int op=0;
+		Scanner Leer = new Scanner(System.in);
+		float notas[] = new float[6];
+		boolean nn=false;
+		do {
+			System.out.println("___________________________________");
+			System.out.println("|         MENU PRINCIPAL          |");
+			System.out.println("|   Digite una opcion:            |");
+			System.out.println("|   1. Ingresar Notas.            |");
+			System.out.println("|   2. Mostrar Notas Ingresadas.  |");
+			System.out.println("|   3. Promediar Notas.           |");
+			System.out.println("|   4. Salir.                     |");
+			System.out.println("|_________________________________|");
+			op = Leer.nextInt();
+			switch (op){
+				case 1:
+					IngresoNota(notas);
+					System.out.println("---INGRESO DE NOTAS---");
+					nn=true;
+				break;
+				
+				case 2:
+					if(nn==false) {
+						System.out.println("ERROR: Debe ingresar notas antes de mostrarlas");
+					}else{
+						MostrarNota(notas);
+					}
+				break;
+			
+				case 3:
+					if(nn==false) {
+						System.out.println("ERROR: Debe ingresar notas antes de mostrarlas");
+					}else {
+						PromedioNota(notas);
+					}
+				break;
+				
+				case 4:
+					System.out.println("ADIOS!");
+				break;
+				default:
+					System.out.println("ERROR: Digite una opcion valida.");
+			}
+		}while(op!=4);
+	}
+
+	private static void IngresoNota(float[] notas) {
+		// TODO Auto-generated method stub
+		Scanner L = new Scanner(System.in);
+		for(int i=0;i<6;i++) {
+			do {
+			System.out.println("Digite la nota N°"+(i+1));
+			notas[i] = L.nextFloat();
+			if(notas[i]<1||notas[i]>7) {
+				System.out.println("ERROR: Digite una nota entre 1 y 7");
+			}
+			}while(notas[i]<1||notas[i]>7);
+			System.out.println("Acaba de ingresar la nota: "+notas[i]);
+		}
+	}
+
+	private static void MostrarNota(float[] notas) {
+		// TODO Auto-generated method stub
+		for(int i=0;i<6;i++) {
+			System.out.println("Nota N°"+(i+1)+": "+notas[i]);
+		}
+	}
+	private static void PromedioNota(float[] notas) {
+		// TODO Auto-generated method stub
+		float prom=0,suma=0;
+		for (int i=0;i<6;i++) {
+			suma=suma+notas[i];
+			
+		}
+		prom=suma/6;
+		float resultado = prom;
+		System.out.println("El Promedio de Notas del Alumno es de: "+prom);
+		if(prom>=3.95) {
+			System.out.println("ALUMNO APROBADO");
+		}else {
+			System.out.println("ALUMNO REPROBADO");
+		}
+	}
+}

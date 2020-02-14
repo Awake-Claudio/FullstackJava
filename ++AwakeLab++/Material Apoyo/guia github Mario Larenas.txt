@@ -1,0 +1,37 @@
+Mini manual hithub Mario Larenas Riveros
+
+
+Subir archivos de un pc local a GitHub
+
+1°Crear cuenta en HitHub
+2°Crear Repositorio (Lugar donde se guardaran los archivos)
+3°Instalar Git
+4°Crear carpeta donde se gurdaran los archivos locales(Repositorio)
+5°Copiar archivos creados a la carpeta Repositorio
+6°Boton derecho del mouse sobre la carpeta y seleccionar..Git Bash here
+9.Sino iniciar git y recorrer las carpetas con cd .. (change directory)
+10.Escribir pwd y me muetra la ruta en el pc de la carpeta local
+11.Escribir ls -l listado de archivos con sus permisos respectivos(solo los muestra)
+12.Escribir git init  (Me inicializa un repositorio vacio en el pc local)(copia de los proyectos)
+13.Escribir git add .    //añades archivos gitarea
+14.Escribir git commit -m 'Cometario de la subida, primer commit etc'' Aca se tienen los archivos en el repositorio local
+15.Aca se suben a github  vamos a www.github.com ingresamos a nuestro repositorio y copiamos la ruta que aparece en el apartado
+...or push an existing repository from the command line
+16.Escribir git config --global user.name "nombreusuario"       (usuariodegihub)
+17.Escribir git config --global user.email "email"              (emaildegithub)
+18. git remote add origin https://github.com/usuario/nombredelrepositorio.git
+asocia en remoto url con nuestro repositorio local
+(si nos pide user y clave las ingresamos)
+16.Se envian los archivos al repositorio remoto que asignamos
+git push -u origin master
+17. opcional si se usan dependencias
+www.gitignore.io
+se seleciona el sistema operativo que trabajamos. asi no se copian archivos que no queremos subir
+como trabajaremos con jacascrip seleccionamos bower nuestro gestor de dependencias
+
+aca creamos el code del archivo git lo ideal es hacerlo antes del subir los archivos
+
+
+Bajar archivos de GitHub a un pc local
+
+1°.git clone https://github.com/usuario/repositorio.git    (se copia el Patch de su repositorio en clone o Download desde GitHub, con eso baja los archivos )

@@ -1,0 +1,15 @@
+EJERCICIO 1
+Se requiere el ingreso de 3 números cualquiera, en el que al tener la suma total de ellos,
+se divide por la cantidad de los números ingresados.
+Para este caso, se le solicitará en el menú a la persona que ingrese 3 números. Luego de eso, el programa sumará
+y realizará la correspondiente divisiñon de forma automática.
+
+EJERCICIO 2
+Se requiere el registro de las personas que van al baño. Se necesita el nombre y su género (masculino o femenino),
+en el que en base a su género, se le informe el baño al cual asistir (baño de hombres o baño de mujeres).
+Para este caso, en el menú se solicitará su nombre y su género, siendo informado automáticamente del baño asignado (baño
+de hombres o baño de mujeres)
+
+EJERCICIO 3
+En base al registro de personas que van al baño, se requiere registrar el cobro del uso de baños o duchas. Para baños, se 
+debe cobrar $250 pesos y para el uso de duchas, el cobro de $2.500 pesos.

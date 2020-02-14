@@ -1,0 +1,33 @@
+SubProceso RescatarDatos(casas)
+	definir i como entero
+	i = 0
+	Repetir
+		mostrar "ingresar el dato: ",i
+		leer dato
+		si dato>=1 y dato<=7
+			casas[i] = dato
+			i=i+1
+		SiNo
+			mostrar "ingresar dato correcto"
+		FinSi
+	Hasta Que i == 9
+FinSubProceso
+SubProceso MostrarHabitantes(casas)
+	para a=0 hasta 9 con paso 1 hacer
+		si casas[a] == 1
+			mostrar "Es Solter@"
+		FinSi
+		Si casas[a] > 1 y casas[a]<=4 
+			mostrar "Hay Familia"
+		FinSi
+		Si casas[a]>4
+			mostrar "Es Oficina"
+		FinSi
+	FinPara
+FinSubProceso
+Algoritmo CasasGente
+	Dimension casas[10]
+	RescatarDatos(casas)
+	MostrarHabitantes(casas)
+FinAlgoritmo
+
