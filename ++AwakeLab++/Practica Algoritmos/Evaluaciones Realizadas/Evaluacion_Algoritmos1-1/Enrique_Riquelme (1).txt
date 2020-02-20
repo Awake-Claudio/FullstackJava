@@ -1,7 +1,0 @@
-
-
-     Mi desarrollo del probleba sera construir cada función por separado.
-     Es decir una funcion un archivo psaint.....luego los copiaré para hacer
-     el menu general.
-     
-     
