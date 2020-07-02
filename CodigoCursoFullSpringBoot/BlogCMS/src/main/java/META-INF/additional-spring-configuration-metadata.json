@@ -1,0 +1,42 @@
+{"properties": [
+  {
+    "name": "spring.propiedad",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.propiedad'"
+  },
+  {
+    "name": "bytecode.propiedad",
+    "type": "java.lang.String",
+    "description": "A description for 'bytecode.propiedad'"
+  },
+  {
+    "name": "trats.appFileConfiguration",
+    "type": "java.lang.String",
+    "description": "A description for 'trats.appFileConfiguration'"
+  },
+  {
+    "name": "trats.appFileConfiguration",
+    "type": "java.lang.String",
+    "description": "A description for 'trats.appFileConfiguration'"
+  },
+  {
+    "name": "klaudecode.propiedad",
+    "type": "java.lang.String",
+    "description": "A description for 'klaudecode.propiedad'"
+  },
+  {
+    "name": "klaudecode.usuario.nombre",
+    "type": "java.lang.String",
+    "description": "A description for 'klaudecode.usuario.nombre'"
+  },
+  {
+    "name": "klaudecode.usuario.correo",
+    "type": "java.lang.String",
+    "description": "A description for 'klaudecode.usuario.correo'"
+  },
+  {
+    "name": "klaudecode.usuario.contrasena",
+    "type": "java.lang.String",
+    "description": "A description for 'klaudecode.usuario.contrasena'"
+  }
+]}
