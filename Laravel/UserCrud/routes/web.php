@@ -40,14 +40,49 @@ Route::get('/prueba-dual/{numero?}/{text?}', function ($num='ingrese un "/" y un
 // ruta para vista para login de usuario usando atajo para acceder a vista
 route::view('logeo','login',['usuario'=>'No identificado']);
 
-//+++++++++++++++++++++++++
+
+//ruta para ver la plantilla
+Route::get('/p', function () {
+    return view('plantilla');
+});
+
+//+++++++++ Rutas del proyecto ++++++++++++++++
 
 // Ruta para el home
-route::get('iniciar',function(){
-    return view('Home')->name('inicio');
+route::get('/inicio',function(){
+    return view('Home'); //->name('iniciar')
 });
 
 // Ruta para el login
-route::get('acceder',function(){
-    return view('Home')->name('acceso');
+route::get('/acceso',function(){
+    return view('login'); //->name('accederuser')
 });
+
+// Ruta para ver usuarios
+route::get('/verusuarios',function(){
+    return view('usuarios'); //->name('listauser')
+});
+
+// Ruta para editar (crear/modificar) usuarios
+route::get('/editausuario',function(){
+    return view('editusuario'); //->name('edituser')
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

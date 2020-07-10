@@ -1,10 +1,7 @@
-@extends('style')
-@section('body')
+@extends('plantilla')
+@section('cuerpo')
     <h1> Acceso UserCrud</h1>
-    <div class="container login-container">
         <div class="row">
-            <div class="col-md-6 login-form-1">
-            </div>
             <div class="col-md-6 login-form-2">
                 <h3>Bienvnido Usuario: {{ $usuario }}</h3>
                 <form method="POST">
@@ -29,5 +26,4 @@
                 </form>
             </div>
         </div>
-    </div>
 @endsection
