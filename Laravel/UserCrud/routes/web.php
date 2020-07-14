@@ -17,6 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home'); //pagina index
+
+
+/*-----------------------Ejempos basicos---------------------------------------------------
+
 // con parametros libres
 Route::get('/prueba/{param?}', function ($param='ingrese un "/" y un valor en la url') {
     return 'Hola, Probando la Ruta con parametro : '.$param;
@@ -45,44 +52,24 @@ route::view('logeo','login',['usuario'=>'No identificado']);
 Route::get('/p', function () {
     return view('plantilla');
 });
+*/
+//+++++++++ Rutas para vistas++++++++++++++++
 
-//+++++++++ Rutas del proyecto ++++++++++++++++
+// Vista para listar usuarios
+Route::get('/home/listusers','UsuarioController@listar')->name('listausuario');
 
-// Ruta para el home
-route::get('/inicio',function(){
-    return view('Home'); //->name('iniciar')
-});
+// Vista para crear usuarios
+Route::get('/home/createusers','UsuarioController@crear')->name('crearusuario');
 
-// Ruta para el login
-route::get('/acceso',function(){
-    return view('login'); //->name('accederuser')
-});
+// Vista para editar usuario
+Route::get('/home/editarusers/{id}','UsuarioController@editar'); 
 
-// Ruta para ver usuarios
-route::get('/verusuarios',function(){
-    return view('usuarios'); //->name('listauser')
-});
+// Vista para buscar un usuario
+Route::get('/home/findusers','UsuarioController@buscar')->name('findusuario');
 
-// Ruta para editar (crear/modificar) usuarios
-route::get('/editausuario',function(){
-    return view('editusuario'); //->name('edituser')
-});
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+//+++++++++ Rutas para usar Apis  ++++++++++++++++
+Route::post('/home/addusers','UsuarioController@add');            //crear usuario 
+//Route::get('/listusers','UsuarioController@getAll');            //listar usuarios
+Route::get('/home/dellusers/{id}','UsuarioController@delete');    // eliminar usuario
+Route::post('/home/editusers/{id}','UsuarioController@edit');     // modificar usuario
+Route::post('/home/finduser','UsuarioController@getuserByname');  //buscar usuario por name

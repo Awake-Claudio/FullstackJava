@@ -2,24 +2,24 @@
 
 @section('content')
 <div class="col-12">
-    <form action="{{url('/home/editusers/'.$usuario->id)}}" method="post" enctype="multipart/form-data">
+    <form action="{{url('/home/addusers')}}" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
         <input type="hidden" field="#">
         <div class="form-group">    
             <label for="name">Nombre de Usuario</label>
-            <input class="form-control" type="text" value="{{$usuario->name}}" id="name" field="#" name="name">
+            <input class="form-control" type="text" value="" id="name" field="#" name="name">
         </div>
         <div class="form-group">
             <label for="email">Correo</label>
-            <input class="form-control" type="email" value="{{$usuario->email}}" id="email" field="#" name="email">
+            <input class="form-control" type="email" value="" id="email" field="#" name="email">
         </div>
         <div class="form-group">
             <label for="password">Contrasena</label>
-            <input class="form-control" type="password" value="{{$usuario->password}}" id="password" field="#" name="password">
+            <input class="form-control" type="password" value="" id="password" field="#" name="password">
         </div>
         <div class="form-group">
             <label for="password">Rol</label>
-            <input class="form-control" type="password" value="{{$usuario->role}}" id="password" field="#" name="password">
+            <input class="form-control" type="password" value="" id="password" field="#" name="password">
         </div>
         
         <div class="form-group">
