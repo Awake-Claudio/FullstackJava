@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sirklaude.Earthquake.model.Application;
 import com.sirklaude.Earthquake.model.Sismo;
+import com.sirklaude.Earthquake.service.ApplicationService;
 import com.sirklaude.Earthquake.service.SismoService;
 
 @RestController
@@ -22,6 +24,9 @@ public class SismoController {
 
 	@Autowired
 	private SismoService sismoService;
+	
+	@Autowired
+	private ApplicationService appService;
 	
 	@GetMapping("/listar") // mostrar todos los sismos regisstrados en BD
 	public ResponseEntity<List<Sismo>> listarSismos(){
@@ -41,33 +46,33 @@ public class SismoController {
 	@GetMapping("/{fechaIni}/{fechaFin}")
 	public void buscarSismosFechas(@PathVariable String fechainit, @PathVariable String fechafin){
 		ObjectMapper mapper = new ObjectMapper();
-		TypeReference<List<Sismo>> typeReference = new TypeReference<List<Sismo>>(){};
+		TypeReference<List<Application>> typeReference = new TypeReference<List<Application>>(){};
 		// para registrar todos los sismos
 		InputStream input = TypeReference.class.getResourceAsStream(""
 				+ "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime="
 				+ fechainit +"&endtime="+ fechafin);
 		
 		try {
-			List<Sismo> sismos = mapper.readValue(input, typeReference);
-			sismoService.registrar(sismos);
-			System.out.println("Se registraron varios sismos");
+			List<Application> apps = mapper.readValue(input, typeReference);
+			appService.registrar(apps);
+			System.out.println("Se registraron varios registros");
 		} catch(IOException e) {
-			System.out.println("No se pudo realizar registros de sismos: "+e.getMessage());
+			System.out.println("No se pudo realizar registros: "+e.getMessage());
 		}
 	}
 	
 	@GetMapping("/{magmin}/{magmin}")
 	public void buscarSismosMagnitud(@PathVariable double magmin, @PathVariable double magmax){
 		ObjectMapper mapper = new ObjectMapper();
-		TypeReference<List<Sismo>> typeReference = new TypeReference<List<Sismo>>(){};
+		TypeReference<List<Application>> typeReference = new TypeReference<List<Application>>(){};
 		// para registrar todos los sismos
 		InputStream input = TypeReference.class.getResourceAsStream(""
 				+ "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minmagnitude="
 				+ magmin +"&maxmagnitude="+ magmax);
 		
 		try {
-			List<Sismo> sismos = mapper.readValue(input, typeReference);
-			sismoService.registrar(sismos);
+			List<Application> apps = mapper.readValue(input, typeReference);
+			appService.registrar(apps);
 		} catch(IOException e) {
 
 		}
