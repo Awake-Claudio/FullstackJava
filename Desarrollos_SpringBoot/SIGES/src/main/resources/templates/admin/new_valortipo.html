@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<div th:replace="/components/style.html"></div>
+<title>Crear Parametro Tipo</title>
+</head>
+<body>
+	<div th:replace="/components/nav.html"></div>
+		<div class="container mt-4">
+			<div class="col-sm-6">
+				<form th:action="@{/savet}" th:object=${tipo} method="post">
+					<div class="card">
+						<div class="card-header">
+							<h2>Crear Valor de Parametro Tipo</h2> 	<!-- recibir id de tipo para crear valor -->
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label>ID</label> 
+								<input th:field="*{IdTipo}" type "text" class="form-control-static" />
+							</div>
+							<div class="form-group">
+								<label>Nombre Valor del Parametro</label> 
+								<input th:field="*{nombre}" type="text" class="form-control" placeholder="ingrese nombre del parametro tipo" />
+							</div>
+						</div>
+						<div class="card-footer">
+							<input type="submit" value="Guardar" class="btn btn-success">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	<div th:replace="/components/script.html"></div>
+</body>
+</html>

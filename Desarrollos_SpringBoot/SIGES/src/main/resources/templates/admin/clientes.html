@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<div th:replace="/components/style.html"></div>
+<title>Usuarios Clientes</title>
+</head>
+<body>
+	<div th:replace="/components/nav.html"></div>
+	<div class="container">
+		<div class="row">
+			<div class="alert col-12 alert-primary" role="alert">
+				<h2>Clientes Registrados</h2>
+			</div>
+		</div>
+		<div class="row">
+			<!--  Tabla -->
+			<form class="form-inline my-2 my-lg-0">
+      			<input class="form-control mr-sm-2" type="search" placeholder="Por Nombre" aria-label="Search">
+      			<button class="btn btn-primary" type="submit">Buscar</button>
+    		</form>
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">USER NAME</th>
+						<th scope="col">NOMBRE</th>
+						<th scope="col">APELLIDOS</th>
+						<th scope="col">CORREO</th>
+						<th scope="col">CELULAR</th>
+					<!-- Datos propios de Cliente
+						<th scope="col">REGIÓN</th>
+						<th scope="col">COMUNA</th>
+						<th scope="col">TIPO CLIENTE</th> -->
+						<th scope="col">ACCIONES</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="cliente:${clientes}">
+					<!-- Datos Generico -->
+						<td th:text="${cliente.getIdUsuario()}"></td>
+						<td th:text="${cliente.getUserName()}"></td>
+						<td th:text="${cliente.getNombre()}"></td>
+						<td th:text="${cliente.getApellidos()}"></td>
+						<td th:text="${cliente.getCorreo()}"></td>
+						<td th:text="${cliente.getCelular()}"></td>
+					<!-- Datos Propios 
+						<td th:text="${cliente.Region.getNombre()}"></td>
+						<td th:text="${cliente.Comuna.getNombre()}"></td>
+						<td th:text="${cliente.tipoCliente.getNombre()}"></td> -->
+						<td style="display: flex; justify-items: center; align-items: center;">
+							<button type="button" class="btn btn-primary">
+								<a class="text-white" th:href="@{/mostrar-cli/}+${cliente.getIdUsuario()}">Ver Ficha</a>
+							</button>
+							<button type="button" class="btn btn-warning">
+								<a class="text-white" th:href="@{/editar-cli/}+${cliente.getIdUsuario()}">Editar</a>
+							</button>
+							<button type="button" class="btn btn-danger">
+								<a class="text-white" th:href="@{/eliminar-cli/}+${cliente.getIdUsuario()}">Eliminar</a>
+							</button> 
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div th:replace="/components/script.html"></div>
+</body>
+</html>

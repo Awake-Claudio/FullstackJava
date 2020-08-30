@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<div th:replace="/components/style.html"></div>
+<title>Adminsitración de Parametros</title>
+</head>
+<body>
+	<div th:replace="/components/nav.html"></div>
+	<div class="container">
+		<div class="row">
+			<div class="alert col-12 alert-primary" role="alert">
+				<h2>Parametros Tipos Registrados</h2>
+			</div>
+		</div>
+		<div class="row">
+			<!--  Tabla -->
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">PARAMETRO TIPO</th>
+						<th scope="col">FECHA CREACION</th>
+						<th scope="col">ACCIONES</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="tipo:${tipos}">
+					<!-- Datos Generico -->
+						<td th:text="${tipo.getIdTipo()}"></td>
+						<td th:text="${tipo.getNombre()}"></td>
+						<td th:text="${tipo.getFecha()}"></td>
+						<td style="display: flex; justify-items: center; align-items: center;">
+							<button type="button" class="btn btn-primary">
+								<a class="text-white" th:href="@{/mostrar-val/}+${tipo.getIdTipo()}">Ver Valores Tipo</a>
+							</button>
+							<button type="button" class="btn btn-warning">
+								<a class="text-white" th:href="@{/editar-tip/}+${tipo.getIdTipo()}">Editar</a>
+							</button>
+							<button type="button" class="btn btn-danger">
+								<a class="text-white" th:href="@{/eliminar-tip/}+${tipo.getIdTipo()}">Eliminar</a>
+							</button> 
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div th:replace="/components/script.html"></div>
+</body>
+</html>

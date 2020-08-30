@@ -1,0 +1,88 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<div th:replace="/components/style.html"></div>
+<title>Crear Funcionario</title>
+</head>
+<body>
+	<div th:replace="/components/nav.html"></div>
+	<div class="container mt-4">
+		<div class="col-sm-6">
+			<form th:action="@{/savef}" th:object=${funcionario} method="post">
+				<div class="card">
+					<div class="card-header">
+						<h2>Modulo Funcionario</h2>
+					</div>
+					<div class="card-body">
+						<div class="form-group">
+							<label>ID</label> 
+							<input th:field="*{idUsuario}" type "text" class="form-control-static" />
+						</div>
+						<div class="form-group">
+							<label>Nombre de Usuario</label> 
+							<input th:field="*{userName}" type="text" class="form-control" placeholder="ingrese un User Name" />
+						</div>
+						<div class="form-group">
+							<label>Contraseña de Usuario</label> 
+							<input th:field="*{passwod}" type="text" class="form-control" placeholder="ingrese una passwod" />
+						</div>
+						<div class="form-group">
+							<label>Nombre Funcionario</label> 
+							<input th:field="*{nombre}" type="text" class="form-control" placeholder="ingrese nombre del funcionario" />
+						</div>
+						<div class="form-group">
+							<label>Apellidos Funcionario</label> 
+							<input th:field="*{apellidos}" type="text" class="form-control" placeholder="ingrese apellidos del funcionario" />
+						</div>
+						<div class="form-group">
+							<label>Correo</label> <input th:field="*{correo}" type="email"
+								class="form-control" id="exampleFormControlInput1"
+								placeholder="name@example.com" />
+							<div class="form-group">
+								<label>Fecha Nacimiento</label> <input th:field="*{fechaNac}"
+									type="text" class="form-control"
+									placeholder="ingrese fecha Nacimiento  del funcionario" />
+							</div>
+							<div class="form-group">
+								<label>Celular</label> <input th:field="*{celular}" type="text"
+									class="form-control" placeholder="ingrese celular del funcionario" />
+							</div>
+							  
+							<div class="form-group">
+								<label>Fecha Contrato</label> 
+								<input th:field="*{FechaContrato}" type="text" 
+									class="form-control" placeholder="ingrese fecha Nacimiento  del funcionario" />
+							</div>
+							<div class="form-group">
+								<label>Vigente</label> 
+									<select th:field="*{vigente}"class="form-control" id="exampleFormControlSelect1">
+									  	<option value="true">Si</option>
+  										<option value="false">No</option>
+									</select>
+							</div>
+						<!--
+						<div class="form-group">
+							<label>Tipo Funcionario</label> 
+							<select th:field="*{tipoFuncionario}"class="form-control" id="exampleFormControlSelect1">
+								<option>1</option>
+							</select>
+						</div> -->
+						</div>
+						<div class="card-footer">
+							<input type="submit" value="Guardar" class="btn btn-success">
+						</div>
+					</div>
+			</form>
+		</div>
+
+	</div>
+	<div th:replace="/components/script.html"></div>
+</body>
+</html>

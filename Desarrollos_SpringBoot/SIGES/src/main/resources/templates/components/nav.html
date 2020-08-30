@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<!--  <nav class="navbar navbar-dark bg-primary"> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" th:href="@{/home}">SIGES</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse"
+		data-target="#navbarSupportedContent"
+		aria-controls="navbarSupportedContent" aria-expanded="false"
+		aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+		<!-- link a home-->
+			<li class="nav-item active"><a class="nav-link" th:href="@{/home}">Home
+					<span class="sr-only">(current)</span>
+			</a></li>
+		<!-- link a link-->
+			<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+		<!-- link a Admin Clientes-->
+			<li class="nav-item dropdown"><a
+				class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+				role="button" data-toggle="dropdown" aria-haspopup="true"
+				aria-expanded="false"> Clientes </a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" th:href="@{/admin/listarClientes}">Listar Clientes</a> <a
+						class="dropdown-item" th:href="@{/admin/crearClientes}">Crear Cliente</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Something else here</a>
+				</div></li>
+				<!-- link a Admin Funcvionarios-->
+			<li class="nav-item dropdown"><a
+				class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+				role="button" data-toggle="dropdown" aria-haspopup="true"
+				aria-expanded="false"> Funcionarios </a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" th:href="@{/admin/listarFuncionarios}">Listar Funcionarios</a> <a
+						class="dropdown-item" th:href="@{/admin/crearFuncionarios}">Crear Funcionario</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Something else here</a>
+				</div></li>
+			<!-- link a Admin Parametros-->
+			<li class="nav-item dropdown"><a
+				class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+				role="button" data-toggle="dropdown" aria-haspopup="true"
+				aria-expanded="false"> Parametros </a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" th:href="@{/admin/listarTipos}">Listar Tipos</a> <a
+						class="dropdown-item" th:href="@{/admin/crearTipos}">Crear Tipos</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Something else here</a>
+				</div></li>
+		</ul>
+	</div>
+</nav>

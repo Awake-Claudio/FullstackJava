@@ -1,0 +1,83 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<div th:replace="/components/style.html"></div>
+<title>Ficha Cliente</title>
+</head>
+<body>
+	<div th:replace="/components/nav.html"></div>
+	<div class="container-fluid">
+		<div class="col-sm-12">
+			<form th:object=${cliente}>
+				<div class="card">
+					<div class="card-header">
+						<h2>Ficha Cliente</h2>
+					</div>
+					<div class="card-body">
+						<div class="form-group">
+							<label>ID: </label> 
+							<input th:field="*{idUsuario}" class="form-control" type="text" readonly>
+						</div>
+						<div class="form-group">
+							<label>Nombre de Usuario</label> 
+							<input th:field="*{userName}" class="form-control" type="text" readonly>
+						</div>
+						<div class="form-group">
+							<label>Nombre Cliente</label> 
+							<input th:field="*{nombre}" class="form-control" type="text" readonly>
+						</div>
+						<div class="form-group">
+							<label>Apellidos Cliente</label> 
+							<input th:field="*{apellidos}" class="form-control" type="text" readonly>
+						</div>
+						<div class="form-group">
+							<label>Correo</label> 
+							<input th:field="*{correo}" class="form-control" type="text" readonly>
+						</div>
+						<div class="form-group">
+							<label>Fecha Nacimiento</label> 
+							<input th:field="*{fechaNac}" class="form-control" type="text" readonly>
+						</div>
+						<div class="form-group">
+							<label>Celular</label> 
+							<input th:field="*{celular}" class="form-control" type="text" readonly>
+						</div>
+							<!--  
+						<div class="form-group">
+							<label>Región de Domicilio</label> 
+							<select th:field="*{region}"class="form-control" id="exampleFormControlSelect1">
+								<option>1</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Comuna de Domicilio</label> 
+							<select th:field="*{comuna}"class="form-control" id="exampleFormControlSelect1">
+								<option>1</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Tipo Cliente</label> 
+							<select th:field="*{tipoCliente}"class="form-control" id="exampleFormControlSelect1">
+								<option>1</option>
+							</select>
+						</div> -->
+					</div>
+					<div class="card-footer">
+						<button type="button" class="btn btn-primary">
+							<a class="text-white" th:href="@{/admin/listarClientes}">Volver</a>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div th:replace="/components/script.html"></div>
+</body>
+</html>
